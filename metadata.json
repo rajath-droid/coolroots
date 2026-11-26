@@ -1,0 +1,8 @@
+{
+  "name": "CoolRoots",
+  "description": "Ancient Wisdom. Modern Cooling. Traditional Indian passive-cooling and heat-reduction e-commerce platform.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
