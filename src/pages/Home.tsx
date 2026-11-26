@@ -1,4 +1,4 @@
-import { ArrowRight, Check, Compass, Droplets, Leaf, Sun, Wind } from 'lucide-react';
+import { ArrowRight, Check, Compass, Droplets, Leaf, Sparkles, Sun, Wind } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { CategoryCard } from '../components/CategoryCard';
 import { ProductCard } from '../components/ProductCard';
@@ -103,6 +103,39 @@ export function Home() {
                   />
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* AI Smart Cooling & Room Customization Entry */}
+      <section className="py-8 sm:py-10 bg-gradient-to-r from-[#EEF4EA] via-[#F5F2E9] to-[#FAF8F4] border-b border-white/75">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="rounded-[22px] bg-white/70 backdrop-blur-lg border border-white/90 p-6 sm:p-8 shadow-[0_12px_34px_-12px_rgba(22,48,36,0.14)] flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+            <div className="max-w-2xl space-y-2">
+              <p className="inline-flex items-center gap-1.5 text-xs font-medium uppercase tracking-[0.14em] text-[#1E3D2F]">
+                <Sparkles className="w-3.5 h-3.5 text-[#B84E32]" aria-hidden="true" />
+                <span>AI Smart Cooling & Room Customization</span>
+              </p>
+              <h2 className="font-display text-2xl sm:text-3xl font-semibold text-[#163024]">
+                Analyze your room, local weather, and preview products in your space.
+              </h2>
+              <p className="text-sm text-[#2D4B3C] leading-relaxed">
+                Upload room photos or a 360° panorama, enter occupancy, detect real-time outdoor
+                temperature, get tailored CoolRoots recommendations, and visualize placement directly
+                in your room.
+              </p>
+            </div>
+
+            <div className="shrink-0">
+              <Link
+                to="/customize-cooling"
+                className="inline-flex items-center gap-2 px-6 py-3.5 min-h-[46px] rounded-[16px] bg-gradient-to-r from-[#1E3D2F]/92 to-[#2B5240]/92 backdrop-blur-md border border-white/25 text-white text-sm font-medium hover:from-[#163024] hover:to-[#1E3D2F] transition-all shadow-[0_10px_24px_-8px_rgba(22,48,36,0.38)] whitespace-nowrap"
+              >
+                <Sparkles className="w-4 h-4" aria-hidden="true" />
+                <span>Customize Cooling for My Space</span>
+                <ArrowRight className="w-4 h-4" aria-hidden="true" />
+              </Link>
             </div>
           </div>
         </div>

@@ -13,6 +13,7 @@ import { CheckoutPayment } from './pages/CheckoutPayment';
 import { Contact } from './pages/Contact';
 import { CoolingFinder } from './pages/CoolingFinder';
 import { CoolingGuide } from './pages/CoolingGuide';
+import { CustomizeCooling } from './pages/CustomizeCooling';
 import { ForgotPassword } from './pages/ForgotPassword';
 import { Home } from './pages/Home';
 import { OrderDetails } from './pages/OrderDetails';
@@ -95,6 +96,7 @@ export default function App() {
               <Route path="/checkout/success" element={<OrderSuccess />} />
               <Route path="/order-success" element={<OrderSuccess />} />
               <Route path="/finder" element={<CoolingFinder />} />
+              <Route path="/customize-cooling" element={<CustomizeCooling />} />
               <Route path="/cooling-guide" element={<CoolingGuide />} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />

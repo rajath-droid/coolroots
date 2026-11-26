@@ -216,3 +216,90 @@ export interface RecommendationResult {
   reason: string;
   matchScore: number;
 }
+
+export interface UploadedRoomImage {
+  id: string;
+  name: string;
+  dataUrl: string;
+  width: number;
+  height: number;
+  isPanoramic: boolean;
+}
+
+export interface RoomInstallationZone {
+  zoneName: string;
+  surfaceType: string;
+  suitabilityNote: string;
+}
+
+export interface RoomVisionAnalysis {
+  roomType: string;
+  summary: string;
+  dimensionsCertainty: 'approximate' | 'uncertain';
+  estimatedLengthFt: number | null;
+  estimatedWidthFt: number | null;
+  estimatedHeightFt: number | null;
+  estimatedAreaSqFt: number | null;
+  needsUserDimensions: boolean;
+  dimensionNote: string;
+  windowsCount: number;
+  doorsCount: number;
+  ventilationNotes: string;
+  sunlightExposure: string;
+  wallAndRoofNotes: string;
+  installationZones: RoomInstallationZone[];
+}
+
+export interface WeatherSnapshot {
+  locationName: string;
+  regionOrCountry?: string;
+  latitude: number;
+  longitude: number;
+  temperatureC: number;
+  apparentTempC: number;
+  humidityPct: number;
+  windSpeedKmh: number;
+  conditionLabel: string;
+  source: 'geolocation' | 'manual';
+  fetchedAt: string;
+}
+
+export interface CoolingRecommendationItem {
+  productId: string;
+  variantId: string;
+  productName: string;
+  variantName: string;
+  category: string;
+  image: string;
+  unitPrice: number;
+  recommendedQuantity: number;
+  suggestedLocation: string;
+  whyRecommended: string;
+  maxStock: number;
+}
+
+export interface CoolingRecommendationReport {
+  coolingLoadLevel: 'Light' | 'Moderate' | 'High' | 'Intense';
+  estimatedAreaSqFt: number;
+  occupants: number;
+  outdoorTemperatureC: number;
+  locationName: string;
+  climateAdvice: string;
+  overallExplanation: string;
+  recommendations: CoolingRecommendationItem[];
+  estimatedTotalCost: number;
+}
+
+export interface RoomOverlayItem {
+  instanceId: string;
+  productId: string;
+  variantId: string;
+  name: string;
+  image: string;
+  xPercent: number;
+  yPercent: number;
+  widthPx: number;
+  rotationDeg: number;
+  flipX: boolean;
+  opacity: number;
+}

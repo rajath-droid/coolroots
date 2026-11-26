@@ -65,6 +65,11 @@ export function Footer() {
             <h4 className="text-sm font-semibold text-white mb-4">Learn & Plan</h4>
             <ul className="space-y-2.5 text-sm text-[#D7E0D9]">
               <li>
+                <Link to="/customize-cooling" className="hover:text-white transition-colors">
+                  Customize Cooling for My Space
+                </Link>
+              </li>
+              <li>
                 <Link to="/finder" className="hover:text-white transition-colors">
                   Find Your Cooling Solution
                 </Link>
